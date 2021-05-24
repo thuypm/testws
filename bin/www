@@ -27,7 +27,7 @@ var server = http.createServer(app);
 const WebSocket = require('ws');
 
 const wss = new WebSocket.Server({
-  port: 8080,
+  port: 4002,
   perMessageDeflate: false
 });
 wss.on('connection', function connection(ws, req) {
@@ -38,7 +38,7 @@ wss.on('connection', function connection(ws, req) {
 
   ws.send('something');
 });
-server.listen(port);
+server.listen(port, '0.0.0.0');
 server.on('error', onError);
 server.on('listening', onListening);
 
