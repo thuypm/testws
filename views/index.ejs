@@ -16,13 +16,13 @@
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-  	// setCookie('test', 'viip', '5');
-  	// const ws = new WebSocket("ws://192.168.1.155:8080");
-  	// ws.send('akoclo');
-  	// ws.onmessage = (value)=>{
-  	// 	console.log(value);
-  	// }
-  	// console.log(document.cookie);
-  	// console.log(ws);
+  	setCookie('test', 'viip', '5');
+  	const ws = new WebSocket("ws://18.136.21.159:4002");
+  	ws.send('akoclo');
+  	ws.onmessage = (value)=>{
+  		console.log(value);
+  	}
+  	console.log(document.cookie);
+  	console.log(ws);
   </script>
 </html>
