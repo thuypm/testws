@@ -49,7 +49,8 @@ const wss = new WebSocket.Server({
   }
 });
 wss.on('connection', function connection(ws, req) {
-  ws.send(req.headers);
+  console.log(req.headers)
+  wss.send(req.headers);
   ws.on('message', function incoming(message) {
     console.log('received: %s', message);
   });
